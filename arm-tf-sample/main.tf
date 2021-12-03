@@ -1,4 +1,4 @@
-rovider "azurerm" {
+provider "azurerm" {
     version = "~>2.0"
     features {}
 }
