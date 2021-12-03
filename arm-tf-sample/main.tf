@@ -7,7 +7,7 @@ resource "azurerm_template_deployment" "storage_account_arm" {
   name                = var.storage_account_deployment_name
   resource_group_name = var.storage_account_resource_group_name
   deployment_mode     = "Incremental"
-  template_body       = file("arm-tf-sample/templates/storage-account.json")
+  template_body       = file("templates/storage-account.json")
   parameters = {
     StorageAccountName      = var.storage_account_StorageAccountName
     storageAccountType      = var.storage_account_storageAccountType
