@@ -1,3 +1,11 @@
+# Configure the Microsoft Azure Provider
+provider "azurerm" {
+    # The "feature" block is required for AzureRM provider 2.x. 
+    # If you're using version 1.x, the "features" block is not allowed.
+    version = "~>2.0"
+    features {}
+}
+
 resource "azurerm_template_deployment" "storage_account_arm" {
   name                = var.storage_account_deployment_name
   resource_group_name = var.storage_account_resource_group_name
