@@ -1,3 +1,7 @@
+provider "azurerm" {
+  features {}
+}
+
 resource "azurerm_template_deployment" "terraform-arm" {
   name                = "terraform-arm-01"
   resource_group_name = azurerm_resource_group.terraform-arm.name
