@@ -1,4 +1,5 @@
 provider "azurerm" {
+  version = "~>2.0"
   features {}
 }
 
@@ -11,7 +12,6 @@ resource "azurerm_template_deployment" "terraform-arm" {
   parameters = {
     "storageAccountName" = "terraformarm"
     "storageAccountType" = "Standard_LRS"
-
   }
 
   deployment_mode = "Incremental"
