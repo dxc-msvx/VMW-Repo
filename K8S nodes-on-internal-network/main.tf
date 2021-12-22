@@ -52,7 +52,7 @@ resource "azurerm_kubernetes_cluster" "example" {
     }
 
     kube_dashboard {
-      enabled = true
+      enabled = false
     }
 
     oms_agent {
